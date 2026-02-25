@@ -1,8 +1,9 @@
-hello:hello.c
-		echo "hello worlf" && touch hello
+main:main.o
+		gcc -o main main.o
 
-hello.c:
-		echo " #include<stdio.h> int main(){ print("hello world");} " >hello.c
+main.o:main.c
+		gcc -c main.c
 
 clean:
-		rm hello hello.c
+		rm main
+		rm main.o
